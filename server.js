@@ -25,10 +25,10 @@ app.use("/data", express.static(path.join(__dirname, '/app/data')));
 
 var profiles = [
 				{name: "Donald Trump", photo: "http://static4.businessinsider.com/image/55918a4b6da811695ab77f22-480/rtx1gzco.jpg", scores: ['3', '2', '3', '3', '3', '3', '2', '3', '3', '3']}, 
-				{name: "Sarah Palin", photo: "http://uncyclopedia.wikia.com/wiki/File:Palin_hot.jpg", scores: ['5', '5', '5', '5', '5', '5', '5', '5', '5', '5']},
+				{name: "Sarah Palin", photo: "https://static.mediaequalizer.com/files/uploads/2015/03/Palin-Sarah-2-919x517.jpg", scores: ['5', '5', '5', '5', '5', '5', '5', '5', '5', '5']},
 				{name: "George Bush", photo: "http://cdn.totalfratmove.com/wp-content/uploads/2013/10/678d12741729e00a5d8a19b47edcb865214846856.jpg", scores: ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1']},
 				{name: "Tom Cruise", photo: "https://wallpaperscraft.com/image/tom_cruise_2015_actor_101066_3840x2400.jpg", scores: ['4', '4', '4', '4', '4', '4', '4', '4', '4', '4']},
-				{name: "Winona Ryder", photo: "https://i2.wp.com/media.boingboing.net/wp-content/uploads/2015/06/WR-7.jpg?w=1523", scores: ['3', '1', '5', '2', '3', '3', '3', '1', '3', '2']}
+				{name: "Winona Ryder", photo: "https://s-media-cache-ak0.pinimg.com/564x/3d/ac/64/3dac64674e03a09dadd66604940b0539.jpg", scores: ['3', '1', '5', '2', '3', '3', '3', '1', '3', '2']}
 				];
 
 var userProfile = {};
