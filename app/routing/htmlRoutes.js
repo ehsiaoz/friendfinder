@@ -1,22 +1,18 @@
-var express = require('express')
-var router = express.Router()
 
-// middleware that is specific to this router
-router.use(function timeLog (req, res, next) {
-  console.log('Time: ', Date.now())
-  next()
-})
+var path = require("path");
 
-// Routes
-// =============================================================
+module.exports = function(pathDir){
 
-// define the home page route
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "home.html"));
-});
-// define the survey route
-app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "survey.html"));
-});
-
-module.exports = router
+	return function(app){
+		console.log('htmlroutes pathDir', pathDir)
+		console.log('htmlroutes __dirname', __dirname)
+		app.get("/", function(req, res) {
+		  res.sendFile(path.join(pathDir, "/app/public/home.html"));
+		});
+		// define the survey route
+		app.get("/survey", function(req, res) {
+		  res.sendFile(path.join(pathDir, "/app/public/survey.html"));
+		});	
+	}
+	
+}

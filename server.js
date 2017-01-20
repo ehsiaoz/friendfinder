@@ -3,12 +3,16 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-// var htmlRoutes = require("./htmlRoutes.js")
+// console.log('s __dirname', __dirname);
+// var setAppClosure = require("./app/routing/htmlRoutes.js");
+// console.log('setAppClosure', setAppClosure);
+var setApp =  require("./app/routing/htmlRoutes.js")(__dirname)
 // var apiRoutes = require("./apiRoutes.js")
 
 // Sets up the Express App
 // =============================================================
-var app = express();
+var app = express(); 
+var htmlRoutes = setApp(app);
 var PORT = 3000;
 
 // Sets up the Express app to handle data parsing
@@ -39,13 +43,13 @@ var bestMatchScore = 40;
 // =============================================================
 
 // define the home page route
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "/app/public/home.html"));
-});
-// define the survey route
-app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "/app/public/survey.html"));
-});
+// app.get("/", function(req, res) {
+//   res.sendFile(path.join(__dirname, "/app/public/home.html"));
+// });
+// // define the survey route
+// app.get("/survey", function(req, res) {
+//   res.sendFile(path.join(__dirname, "/app/public/survey.html"));
+// });
 
 app.get("/api/friends", function(req, res) {
 
