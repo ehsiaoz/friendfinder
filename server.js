@@ -13,7 +13,7 @@ var setApp =  require("./app/routing/htmlRoutes.js")(__dirname)
 // =============================================================
 var app = express(); 
 var htmlRoutes = setApp(app);
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
